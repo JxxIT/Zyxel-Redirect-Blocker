@@ -11,6 +11,10 @@ Installation:
 3. Click the Install button.
 4. Try to log in to your router; it should work.
 
+# Fix it permanently
+
+Under the `Remote Management` section, enable the HTTPS sevice on LAN and WAN, and set the port to `443`.
+
 ## How it works
 
 I looked at the frontend code of my Zyxel DX5401-B1 and saw that when some conditions were met, it redirected to HTTPS. Those conditions could be modified by modifying the 'flags.' This script intercepts the flags and sends our modified flags to the client, which reads the flags and doesn't redirect us to HTTPS.
